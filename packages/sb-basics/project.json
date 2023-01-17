@@ -1,0 +1,81 @@
+{
+  "name": "sb-basics",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/sb-basics/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nxrocks/nx-spring-boot:build",
+      "options": {
+        "root": "packages/sb-basics"
+      },
+      "dependsOn": ["^install"],
+      "outputs": ["{workspaceRoot}/packages/sb-basics/target"]
+    },
+    "install": {
+      "executor": "@nxrocks/nx-spring-boot:install",
+      "options": {
+        "root": "packages/sb-basics"
+      },
+      "outputs": ["{workspaceRoot}/packages/sb-basics/target"]
+    },
+    "test": {
+      "executor": "@nxrocks/nx-spring-boot:test",
+      "options": {
+        "root": "packages/sb-basics"
+      }
+    },
+    "clean": {
+      "executor": "@nxrocks/nx-spring-boot:clean",
+      "options": {
+        "root": "packages/sb-basics"
+      }
+    },
+    "run": {
+      "executor": "@nxrocks/nx-spring-boot:run",
+      "options": {
+        "root": "packages/sb-basics"
+      }
+    },
+    "serve": {
+      "executor": "@nxrocks/nx-spring-boot:serve",
+      "options": {
+        "root": "packages/sb-basics"
+      }
+    },
+    "build-image": {
+      "executor": "@nxrocks/nx-spring-boot:build-image",
+      "options": {
+        "root": "packages/sb-basics"
+      }
+    },
+    "build-info": {
+      "executor": "@nxrocks/nx-spring-boot:build-info",
+      "options": {
+        "root": "packages/sb-basics"
+      }
+    },
+    "compile": {
+      "command": "mvn compile",
+      "options": {
+        "root": "packages/sb-basics",
+        "cwd": "packages/sb-basics"
+      }
+    },
+    "docker-up": {
+      "command": "docker compose up -d",
+      "options": {
+        "root": "packages/sb-basics",
+        "cwd": "packages/sb-basics"
+      }
+    },
+    "docker-down": {
+      "command": "docker compose down",
+      "options": {
+        "root": "packages/sb-basics",
+        "cwd": "packages/sb-basics"
+      }
+    }
+  },
+  "tags": []
+}

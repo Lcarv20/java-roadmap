@@ -2,12 +2,10 @@
   "name": "java-roadmap",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {
-  },
+  "scripts": {},
   "private": true,
-  "dependencies": {
-  },
   "devDependencies": {
+    "@nxrocks/nx-spring-boot": "^6.2.1",
     "nx": "15.5.1",
     "prettier": "^2.6.2"
   }

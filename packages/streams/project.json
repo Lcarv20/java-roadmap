@@ -1,0 +1,30 @@
+{
+  "name": "streams",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/streams/src",
+  "projectType": "library",
+  "targets": {
+    "compile": {
+      "command": "mvn compile",
+      "options": {
+        "root": "packages/streams",
+        "cwd": "packages/streams"
+      }
+    },
+    "dev": {
+      "command": "mvn compile && mvn exec:java -Dexec.mainClass=com.example.demo.App",
+      "options": {
+        "root": "packages/streams",
+        "cwd": "packages/streams"
+      }
+    },
+    "clean": {
+      "command": "mvn clean",
+      "options": {
+        "root": "packages/streams",
+        "cwd": "packages/streams"
+      }
+    }
+  },
+  "tags": []
+}
